@@ -65,8 +65,8 @@ body {
           justify-content: center;
   position: absolute;
   left: 100%;
-  -webkit-animation: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s left;
-          animation: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s left;
+  -webkit-animation: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+          animation: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-size: cover !important;
