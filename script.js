@@ -36,7 +36,6 @@ function animateSlider(nextImg, right) {
                 : currImg;
         }
         if (!nextImg && !right) {
-            console.log(currImg);
             nextImg = currImg + 1 < images.length
                 ? currImg + 2
                 : 1;
