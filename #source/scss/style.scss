@@ -1,0 +1,178 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.slider {
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    position: relative;
+
+    .button__container {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+        .btn {
+            padding: 0 15px;
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 50px;
+
+            img {
+                display: block;
+                height: 100%;
+                width: 100%;
+                border-radius: 50px;
+            }
+        }
+
+        .btn-next {
+            opacity: 0.6;
+        }
+
+        .btn-prev {
+            opacity: 0.6;
+        }
+    }
+
+    .images {
+        display: flex;
+        overflow: hidden;
+
+        .img {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: absolute;
+            left: 100%;
+            animation: .6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s left;
+            animation-fill-mode: forwards;
+            background-size: cover !important;
+            background-position: 50% !important;
+
+            &:nth-of-type(1) {
+                background-color: gray
+            }
+
+            &:nth-of-type(2) {
+                background-color: salmon
+            }
+
+            &:nth-of-type(3) {
+                background-color: bisque;
+            }
+
+            &:nth-of-type(4) {
+                background-color: rgb(27, 145, 212);
+            }
+
+            &:nth-of-type(5) {
+                background-color: red;
+            }
+
+            &:nth-of-type(6) {
+                background-color: blue;
+            }
+
+            &:nth-of-type(7) {
+                background-color: violet;
+            }
+
+            &:nth-of-type(8) {
+                background-color: yellow;
+            }
+
+            &:nth-of-type(9) {
+                background-color: aquamarine;
+            }
+
+            &:nth-of-type(10) {
+                background-color: brown;
+            }
+
+            span {
+                padding: 7px 20px;
+                background: rgba(0, 0, 0, .8);
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+                color: #f0f0f0;
+                font-size: 14px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+    }
+
+    .dots {
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        background: gray;
+        border-radius: 50%;
+        margin: 0 3px;
+        cursor: pointer;
+    }
+
+    .active-dot {
+        background: #3f3f3f;
+        cursor: default;
+    }
+}
+
+@keyframes leftNext {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes leftCurr {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes rightNext {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes rightCurr {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100%;
+    }
+}
